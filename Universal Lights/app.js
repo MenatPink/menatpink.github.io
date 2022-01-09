@@ -73,16 +73,22 @@ function Star(rad, zpos, xpos, ypos) {
 }
 
 //This will add a starfield to the background of a scene
-var starsGeometry = new THREE.CircleGeometry();
+// // var starsGeometry = new THREE.BufferGeometry();
+const vertices = [];
 
-// for (var i = 0; i < 500; i++) {
-//   var star = new THREE.Vector3();
-//   star.x = THREE.Math.randFloatSpread(Math.round(WIDTH));
-//   star.y = THREE.Math.randFloatSpread(Math.round(HEIGHT));
-//   star.z = THREE.Math.randFloatSpread(3000);
+for (let i = 0; i < 1000; i++ ){
 
-//   starsGeometry.vertices.push(star);
-// }
+  const x = THREE.MathUtils.randFloatSpread(Math.round(WIDTH))
+  const y = THREE.MathUtils.randFloatSpread(Math.round(HEIGHT));
+  const z = THREE.MathUtils.randFloatSpread(3000);
+
+  vertices.push(x, y, z);
+
+}
+
+const starsGeometry = new THREE.BufferGeometry();
+starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute( vertices, 3));
+
 
 function map(num, in_min, in_max, out_min, out_max) {
   var numerator = (num - in_min) * (out_max - out_min);
@@ -96,13 +102,12 @@ var randomTrueFalse = function() {
 };
 
 var circleArr = [];
-for (var i = 0; i < 500; i++) {
+for (var i = 0; i < 750; i++) {
   var colorVary;
   var colorVary2;
   var colorVary3;
 
   var material = new THREE.MeshLambertMaterial();
-  // { color: "rgb("+ colorVary2 +","+ colorVary3 +"," + colorVary + ")"}
 
   var sphere = new THREE.Mesh(
     new THREE.CircleGeometry(RADIUS, SEGMENTS, RINGS),
@@ -132,7 +137,8 @@ for (var i = 0; i < 500; i++) {
   circleArr.push(sphere);
   scene.add(sphere);
 }
-console.log(sphere)
+
+
 var starsMaterial = new THREE.PointsMaterial({
   color: 0xffffff
 });
