@@ -45,3 +45,6 @@
           transform: scale(1.2); }
           .skills-section ul li div:hover i {
             color: #242943; }
+            #furrowArticle{
+              background-position:left;
+            }
