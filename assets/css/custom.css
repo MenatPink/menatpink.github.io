@@ -1,7 +1,7 @@
 #banner {
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url("../../../images/Against Wall-min.jpg"); }
+  background-image: url("../../../images/side-profile.png"); }
 
 #wrapper > * > .inner {
   margin-bottom: 60px; }
