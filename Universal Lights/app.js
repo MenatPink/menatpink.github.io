@@ -104,7 +104,6 @@ var randomTrueFalse = function() {
 var circleArr = [];
 for (var i = 0; i < 750; i++) {
   var colorVary;
-  var colorVary2;
   var colorVary3;
 
   var material = new THREE.MeshLambertMaterial();
