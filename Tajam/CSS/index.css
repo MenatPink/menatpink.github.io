@@ -45,7 +45,7 @@ body {
   background-position: top center;
   background-blend-mode: multiply;
   width: 100%;
-  height: 670px;
+  min-height: 670px;
 }
 .Section1 header {
   display: flex;
@@ -168,6 +168,7 @@ body {
   width: 80px;
   margin: auto;
   margin-top: 70px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,9 +200,11 @@ body {
 }
 
 .Section2 {
-  height: 605px;
+  min-height: 605px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .Section2 img {
   width: 235px;
@@ -210,8 +213,7 @@ body {
   float: left;
 }
 .Section2 .section2Text {
-  float: right;
-  margin-top: 33px;
+  padding: 50px;
 }
 .Section2 .section2Text h2 {
   font-family: "Playfair Display", serif;
@@ -327,8 +329,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: top center;
-  height: 710px;
-  padding: 1px;
+  min-height: 710px;
 }
 .Section5 .col-xs-3 {
   transform: translateY(-20px);
@@ -336,7 +337,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .Section5 h2 {
-  margin-top: 50px;
+  padding-top: 50px;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-weight: bold;
@@ -490,7 +491,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: top center;
-  height: 491px;
+  min-height: 491px;
   padding-top: 1px;
 }
 .Section7 img {
@@ -513,7 +514,6 @@ body {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  margin: 0;
   width: 100%;
 }
 .Section7 h4 {
@@ -526,12 +526,13 @@ body {
 }
 .Section7 .testimonialWrapper {
   display: flex;
-  width: 400px;
+  max-width: 400px;
   margin: auto;
   margin-top: 10px;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding: 20px;
 }
 .Section7 .testimonialWrapper img {
   width: 45px;
@@ -547,12 +548,14 @@ body {
 
 .Section8 {
   height: 651px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .Section8 .left {
-  margin-top: 50px;
-  margin-left: 153px;
-  width: 460px;
-  float: left;
+  max-width: 460px;
+  margin-top: 40px;
 }
 .Section8 .left h2 {
   font-family: "Playfair Display", serif;
@@ -567,36 +570,34 @@ body {
   height: 45px;
 }
 .Section8 .left input:nth-of-type(4) {
-  width: 460px;
+  width: 100%;
   height: 200px;
   padding-bottom: 140px;
 }
 .Section8 .right {
-  float: right;
-  width: 400px;
-  margin-top: 50px;
-  margin-right: 170px;
+  max-width: 400px;
+  margin-top: 40px;
 }
 .Section8 .right h2 {
   font-family: "Playfair Display", serif;
   font-weight: bold;
+  padding-bottom: 15px;
+}
+.Section8 .right .clients-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
 }
 .Section8 .right div {
   display: flex;
   height: 450px;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
-}
-.Section8 .right div:nth-of-type(1) {
-  float: left;
-}
-.Section8 .right div:nth-of-type(2) {
-  float: right;
+  justify-content: space-between;
 }
 
 footer {
-  padding-bottom: 1px;
+  min-height: 300px;
   height: auto;
   overflow: auto;
   color: white;
@@ -606,10 +607,20 @@ footer {
   background-attachment: fixed;
   background-position: top center;
 }
+footer .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 260px;
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+footer .footer-text {
+  padding-bottom: 20px;
+}
 footer .tajamExtra {
   display: inline-block;
-  margin-top: 57px;
-  margin-left: 229px;
   width: 300px;
 }
 footer .tajamExtra img {
@@ -631,7 +642,6 @@ footer .tajamExtra p {
 }
 footer .ourStudio {
   display: inline-block;
-  margin-left: 30px;
   color: white;
   width: 275px;
 }
@@ -660,9 +670,7 @@ footer .stayInTouch {
   vertical-align: top;
   display: inline-block;
   width: 300px;
-  height: 300px;
-  margin-top: 78px;
-  margin-left: 28px;
+  max-height: 300px;
 }
 footer .stayInTouch h4 {
   font-size: 15pt;
@@ -672,7 +680,7 @@ footer .stayInTouch h4 {
 footer .stayInTouch input {
   padding-left: 10px;
   font-size: 14px;
-  width: 211px;
+  max-width: 211px;
   height: 40px;
   border: solid 1px #8a8a8a;
   background-color: transparent;
@@ -735,23 +743,26 @@ footer .stayInTouch .social:hover:after {
   opacity: 1;
   transform: translateX(-50%) translateY(-50%) scale(1);
 }
+footer .tAndMcontainer {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
 footer .TandM {
-  float: left;
   display: flex;
   width: 350px;
   font-size: 14px;
   justify-content: space-between;
-  margin-left: 229px;
-  margin-top: -90px;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
 }
 footer .copyright {
-  float: right;
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
-  margin-right: 200px;
-  margin-top: -90px;
 }
 
 @media (max-width: 845px) {
@@ -759,8 +770,7 @@ footer .copyright {
     margin-top: 0px;
     margin: auto;
     padding-top: 15px;
-    width: 138px;
-    float: none;
+    min-width: 138px;
   }
   .Section1 ul {
     width: 600px;
@@ -778,9 +788,6 @@ footer .copyright {
   }
 
   .Section2 img {
-    display: block;
-    margin: auto;
-    margin-top: 35px;
     width: 135px;
     height: 129px;
   }
@@ -862,9 +869,6 @@ footer .copyright {
   footer .stayInTouch {
     display: block;
     margin: auto;
-  }
-  footer .TandM, footer .copyright {
-    display: none;
   }
 }
 @media (max-width: 635px) {
