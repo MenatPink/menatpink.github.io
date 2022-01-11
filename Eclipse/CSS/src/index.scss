@@ -107,13 +107,6 @@ header{
         background-color:#a100ff;
         border:none;
         padding-right:20px;
-        img{
-          // position:absolute;
-          // margin:0;
-          // top:50%;
-          // margin-top:-8px;
-          // right:20px;
-        }
       }
     }
   }
@@ -442,9 +435,6 @@ footer{
     list-style-type:none;
     &:nth-of-type(1){
       margin-left:100px;
-    }
-    &:nth-of-type(2){
-
     }
   }
   li{
