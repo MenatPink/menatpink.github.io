@@ -14,7 +14,7 @@ gulp.task('general-gulp-check', function () {
 });
 
 gulp.task('general-watch', function () {
-	gulp.watch('assets/sass/custom/*.scss', gulp.series('general, sass'));
+	gulp.watch('assets/sass/custom/*.scss', gulp.series('general-sass'));
 });
 
 // Tasks for Tajam
